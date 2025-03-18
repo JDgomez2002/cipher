@@ -3,22 +3,21 @@ from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
 import os
 
-key = b'0123456789abcdef'  # Clave de 16 bytes
+key = b'0123456789abcdef'
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect(("127.0.0.1", 8080))
+sock.connect(("172.20.10.2", 8080))
 
 try:
-    while True:
-        mensaje = input("Ingrese el mensaje a enviar (o 'exit' para salir): ").encode()
-        if mensaje == b'exit':
-            break
+    file_path = input("Ingrese la ruta del archivo a enviar: ")
+    with open(file_path, 'rb') as f:
+        file_data = f.read()
 
-        iv = os.urandom(16)  # IV aleatorio
-        cipher = AES.new(key, AES.MODE_CBC, iv)
-        mensaje_cifrado = cipher.encrypt(pad(mensaje, AES.block_size))
+    iv = os.urandom(16)  # IV aleatorio
+    cipher = AES.new(key, AES.MODE_CBC, iv)
+    encrypted_data = cipher.encrypt(pad(file_data, AES.block_size))
 
-        # Enviar el IV y el mensaje cifrado por TCP
-        sock.sendall(iv + mensaje_cifrado)
+    # Enviar el IV y el archivo cifrado
+    sock.sendall(iv + encrypted_data)
 finally:
     sock.close()
