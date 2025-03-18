@@ -1,0 +1,3 @@
+¡Tus archivos han sido cifrados!
+Este es un simulacro educativo de ransomware.
+Utiliza el script para desencriptar con la clave que esta en key.bin para recuperar tus archivos.
