@@ -4,6 +4,8 @@
 
 Este laboratorio implementa diferentes casos de uso para el cifrado de información basado en encriptación simétrtica.
 
+#### Visita la carpeta correspondiente para ver los archivos de cada parte del laboratorio.
+
 ## Funcionalidades 
 1. Parte 1: Cifrado de imágenes ppm y pgm.
    2. Encriptar y desencriptar las imágenes basadas en escalas de grises.
