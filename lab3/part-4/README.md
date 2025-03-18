@@ -1,4 +1,4 @@
-# Laboratorio 2 - Parte 4: Implementación de un Ransomware Simulado
+# Laboratorio 3 - Parte 4: Implementación de un Ransomware Simulado
 ## Cifrado de Información
 ### José Daniel Gómez Cabrera 21429
 
