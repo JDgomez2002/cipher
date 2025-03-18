@@ -1,4 +1,4 @@
-# Laboratorio 2 - Parte 3
+# Laboratorio 3 - Parte 3
 ## Cifrado de Información
 ### José Daniel Gómez Cabrera 21429
 
