@@ -1,0 +1,13 @@
+---
+import Layout from "../layout/layout.astro";
+import Card from "@/components/qkd-card";
+---
+<Layout>
+	<main class="grid w-full h-fit place-items-center py-16"> 
+		<article class="flex flex-col gap-4">
+			<h1 class="text-4xl text-center font-bold">Lab 5 QKD</h1>
+			<h3 class="text-center">José Daniel Gómez Cabrera 21429</h3>
+			<Card client:load />
+		</article>
+	</main>
+</Layout>
