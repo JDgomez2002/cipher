@@ -196,7 +196,7 @@ export default function QkdCard() {
                   setEveInterceptionResults([]);
                 }
               }}
-              className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              className="h-4 w-4 text-blue-600 border-zinc-300 rounded focus:ring-blue-500"
             />
             <Label htmlFor="eve_present_checkbox">
               Incluir a Eve (Interceptora)
@@ -214,38 +214,38 @@ export default function QkdCard() {
               Proceso de transmisión y medición
             </h3>
             <div className="overflow-x-auto shadow rounded-lg">
-              <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                <thead className="bg-gray-50 dark:bg-gray-700">
+              <table className="min-w-full divide-y divide-zinc-200 dark:divide-zinc-700">
+                <thead className="bg-zinc-50 dark:bg-zinc-700">
                   <tr>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                    <th className="px-4 py-3 text-left text-xs font-medium text-zinc-500 dark:text-zinc-300 uppercase tracking-wider">
                       #
                     </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                    <th className="px-4 py-3 text-left text-xs font-medium text-zinc-500 dark:text-zinc-300 uppercase tracking-wider">
                       Bit Alice
                     </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                    <th className="px-4 py-3 text-left text-xs font-medium text-zinc-500 dark:text-zinc-300 uppercase tracking-wider">
                       Base Alice
                     </th>
                     {evePresent && (
-                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                      <th className="px-4 py-3 text-left text-xs font-medium text-zinc-500 dark:text-zinc-300 uppercase tracking-wider">
                         Base Eve
                       </th>
                     )}
                     {evePresent && (
-                      <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider min-w-[200px]">
+                      <th className="px-4 py-3 text-left text-xs font-medium text-zinc-500 dark:text-zinc-300 uppercase tracking-wider min-w-[200px]">
                         Acción Eve
                       </th>
                     )}
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                    <th className="px-4 py-3 text-left text-xs font-medium text-zinc-500 dark:text-zinc-300 uppercase tracking-wider">
                       Base Bob
                     </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                    <th className="px-4 py-3 text-left text-xs font-medium text-zinc-500 dark:text-zinc-300 uppercase tracking-wider">
                       Bit Bob (Medido)
                     </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                    <th className="px-4 py-3 text-left text-xs font-medium text-zinc-500 dark:text-zinc-300 uppercase tracking-wider">
                       Bases Coinciden? (A-B)
                     </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+                    <th className="px-4 py-3 text-left text-xs font-medium text-zinc-500 dark:text-zinc-300 uppercase tracking-wider">
                       Bit Conservado?
                     </th>
                     {evePresent && (
@@ -255,7 +255,7 @@ export default function QkdCard() {
                     )}
                   </tr>
                 </thead>
-                <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
+                <tbody className="bg-white dark:bg-zinc-800 divide-y divide-zinc-200 dark:divide-zinc-700">
                   {simulationLog.map((log) => (
                     <tr
                       key={log.index}
@@ -265,35 +265,35 @@ export default function QkdCard() {
                           : ""
                       } ${!log.basesMatch ? "opacity-60" : ""}`}
                     >
-                      <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">
+                      <td className="px-4 py-3 whitespace-nowrap text-sm text-zinc-900 dark:text-zinc-100">
                         {log.index + 1}
                       </td>
-                      <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">
+                      <td className="px-4 py-3 whitespace-nowrap text-sm text-zinc-900 dark:text-zinc-100">
                         {log.aliceBit}
                       </td>
-                      <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">
+                      <td className="px-4 py-3 whitespace-nowrap text-sm text-zinc-900 dark:text-zinc-100">
                         {log.aliceBase}
                       </td>
                       {evePresent && (
-                        <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">
+                        <td className="px-4 py-3 whitespace-nowrap text-sm text-zinc-900 dark:text-zinc-100">
                           {log.eveBase ?? "-"}
                         </td>
                       )}
                       {evePresent && (
-                        <td className="px-4 py-3 text-sm text-gray-700 dark:text-gray-300 min-w-[200px]">
+                        <td className="px-4 py-3 text-sm text-zinc-700 dark:text-zinc-300 min-w-[200px]">
                           {log.eveAction ?? "-"}
                         </td>
                       )}
-                      <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">
+                      <td className="px-4 py-3 whitespace-nowrap text-sm text-zinc-900 dark:text-zinc-100">
                         {log.bobBase}
                       </td>
-                      <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">
+                      <td className="px-4 py-3 whitespace-nowrap text-sm text-zinc-900 dark:text-zinc-100">
                         {log.bobMeasurementOutcome}
                       </td>
-                      <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-900 dark:text-gray-100">
+                      <td className="px-4 py-3 whitespace-nowrap text-sm text-zinc-900 dark:text-zinc-100">
                         {log.basesMatch ? "Sí" : "No"}
                       </td>
-                      <td className="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-100">
+                      <td className="px-4 py-3 whitespace-nowrap text-sm font-medium text-zinc-900 dark:text-zinc-100">
                         {log.bitKept ? `Sí (${log.aliceBit})` : "No"}
                       </td>
                       {evePresent && (
@@ -317,15 +317,15 @@ export default function QkdCard() {
               Sumario y clave sincronizada
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-              <div className="p-3 bg-gray-50 dark:bg-gray-700 rounded shadow">
+              <div className="p-3 bg-zinc-50 dark:bg-zinc-700 rounded shadow">
                 <strong>Bits Originales de Alice:</strong>{" "}
                 <span className="font-mono">{aliceBits.join(" ")}</span>
               </div>
-              <div className="p-3 bg-gray-50 dark:bg-gray-700 rounded shadow">
+              <div className="p-3 bg-zinc-50 dark:bg-zinc-700 rounded shadow">
                 <strong>Bases de Alice (A):</strong>{" "}
                 <span className="font-mono">{aliceBases.join(" ")}</span>
               </div>
-              <div className="p-3 bg-gray-50 dark:bg-gray-700 rounded shadow">
+              <div className="p-3 bg-zinc-50 dark:bg-zinc-700 rounded shadow">
                 <strong>Bases de Bob (B):</strong>{" "}
                 <span className="font-mono">{bobBases.join(" ")}</span>
               </div>
@@ -335,7 +335,7 @@ export default function QkdCard() {
                   <span className="font-mono">{eveBases.join(" ")}</span>
                 </div>
               )}
-              <div className="p-3 bg-gray-50 dark:bg-gray-700 rounded shadow">
+              <div className="p-3 bg-zinc-50 dark:bg-zinc-700 rounded shadow">
                 <strong>Bits Medidos por Bob:</strong>{" "}
                 <span className="font-mono">{bobMeasuredBits.join(" ")}</span>
               </div>
@@ -360,7 +360,7 @@ export default function QkdCard() {
                   {siftedKeyBob.join("") || "(ninguna)"}
                 </span>
               </p>
-              <Separator className="my-4" />
+              <Separator className="my-4 bg-white/75" />
               {siftedKeyAlice.length > 0 && (
                 <p
                   className={`text-lg font-semibold ${
