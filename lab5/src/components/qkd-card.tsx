@@ -4,7 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
-import { Play, Pause } from "lucide-react";
+import {
+  Play,
+  Pause,
+  KeyRound,
+  ShieldCheck,
+  Lightbulb,
+  Network,
+} from "lucide-react";
 
 // Helper type for bases
 type Basis = "↕" | "↗"; // Rectilinear or Diagonal
@@ -169,6 +176,23 @@ export default function QkdCard() {
     <Card className="w-full max-w-4xl mx-auto">
       <CardHeader>
         <CardTitle>Simulación del Protocolo BB84 QKD</CardTitle>
+        <div className="flex items-center justify-center space-x-3 pt-2 text-blue-600 dark:text-blue-400">
+          <KeyRound size={20} />
+          <ShieldCheck size={20} />
+          <Lightbulb size={20} />
+          <Network size={20} />
+        </div>
+        <p className="pt-3 text-sm text-zinc-600 dark:text-zinc-400 text-center">
+          Este programa te permite jugar con una simulación de criptografía
+          cuántica, específicamente el protocolo BB84. Imagina que Alice quiere
+          enviar un mensaje secreto (una clave) a Bob. Usan partículas de luz
+          (fotones) y dos 'idiomas' (bases) para codificar '0's y '1's. Si un
+          espía, Eve, intenta escuchar, inevitablemente perturbará las
+          partículas, ¡alertando a Alice y Bob! Esta simulación te muestra cómo
+          generan una clave segura, cómo Eve puede intentar interceptarla y cómo
+          se dan cuenta si alguien está espiando. ¡Es como un juego de espías
+          con física cuántica para proteger secretos!
+        </p>
       </CardHeader>
       <CardContent className="space-y-6">
         <div className="flex flex-wrap items-center gap-4 mb-4">
