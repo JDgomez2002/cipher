@@ -182,7 +182,7 @@ export default function QkdCard() {
           <Lightbulb size={20} />
           <Network size={20} />
         </div>
-        <p className="pt-3 text-sm text-zinc-600 dark:text-zinc-400 text-center">
+        <p className="pt-3 text-sm text-zinc-300 text-center">
           Este programa te permite jugar con una simulación de criptografía
           cuántica, específicamente el protocolo BB84. Imagina que Alice quiere
           enviar un mensaje secreto (una clave) a Bob. Usan partículas de luz
